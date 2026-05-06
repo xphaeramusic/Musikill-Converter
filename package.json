@@ -1,7 +1,7 @@
 {
   "name": "musikill",
   "version": "2.0.0",
-  "description": "Conversor de mídia e separador de voz/música — local & simples.",
+  "description": "Conversor de mídia local & simples.",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
@@ -10,9 +10,8 @@
     "build": "electron-builder"
   },
   "keywords": [
-    "demucs",
     "audio",
-    "separation",
+    "video",
     "converter",
     "ffmpeg"
   ],
@@ -33,12 +32,20 @@
     ],
     "extraResources": [
       {
-        "from": "resources/models",
-        "to": "models"
+        "from": "resources/ffmpeg",
+        "to": "ffmpeg"
       },
       {
-        "from": "resources/python",
-        "to": "python"
+        "from": "resources/ffprobe",
+        "to": "ffprobe"
+      },
+      {
+        "from": "resources/ffmpeg.exe",
+        "to": "ffmpeg.exe"
+      },
+      {
+        "from": "resources/ffprobe.exe",
+        "to": "ffprobe.exe"
       }
     ],
     "mac": {

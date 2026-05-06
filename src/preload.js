@@ -18,12 +18,6 @@ contextBridge.exposeInMainWorld('API', {
         ipcRenderer.on('converter:progress', (_, data) => cb(data));
     },
 
-    // Separator
-    startSeparation:     opts => ipcRenderer.invoke('separator:start', opts),
-    onSeparatorProgress: cb   => {
-        ipcRenderer.on('separator:progress', (_, data) => cb(data));
-    },
-
     // Cleanup
     removeListeners: channel => ipcRenderer.removeAllListeners(channel),
 });
